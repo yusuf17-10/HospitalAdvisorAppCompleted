@@ -8,8 +8,8 @@ export default class MapScreen extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            longitude:"",
-            latitude:"",
+            longitude:null,
+            latitude:null,
             hospitalList:[],
             searchList:[],
             text:this.props.navigation.getParam("diseaseName")
@@ -76,14 +76,14 @@ export default class MapScreen extends React.Component{
                     (
                                     this.state.hospitalList.map((hospital)=>{
                                         return(
-                                        
+                                          
                                         <Marker.Animated
                                         pinColor={"blue"}
                                         title={hospital.name}
-                                        coordinate={{latitude:hospital.position.latitude,longitude:hospital.position.longitude}}
+                                        coordinate={{latitude:Number(hospital.position.latitude),longitude:Number(hospital.position.longitude)}}
                                         >
                                             <Callout onPress={()=>{
-                                              Linking.openURL("https://"+hospital.description).catch(err=>{
+                                              Linking.openURL("http://"+hospital.website).catch(err=>{
                                                 Alert.alert("Sorry! Couldn't open the webpage!")
                                               })
                                             }} tooltip>
