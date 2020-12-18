@@ -18,7 +18,6 @@ export default class MapScreen extends React.Component{
 
     searchDiseases=async()=>{
         var diseaseName = this.state.text.toLowerCase().trim()
-        Alert.alert(diseaseName);
         var hospitals = await db.collection("diseases").where("diseaseName","==",diseaseName).get()
         hospitals.forEach(doc=>{
           this.setState({
@@ -67,10 +66,9 @@ export default class MapScreen extends React.Component{
 
                              <Marker.Animated
                              pinColor={"red"}
-
                              coordinate={{latitude:this.state.latitude,longitude:this.state.longitude}}
-                             
                              />
+                             
                                {
                                    this.state.hospitalList.length !== 0 ? 
                     (

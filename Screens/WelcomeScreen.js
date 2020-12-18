@@ -191,8 +191,7 @@ export default class App extends React.Component {
           If You Are New User Click SignUp
         </Text>
         <TextInput
-                  keyboardType={"email-address"}
-
+          keyboardType={"email-address"}
           style={styles.input}
           placeholder="Email"
           onChangeText={(text) => {
@@ -222,8 +221,6 @@ export default class App extends React.Component {
           style={styles.button}
           onPress={() => {
             this.setState({ isModalVisible: true });
-
-            
           }}>
           <Text>Signup</Text>
         </TouchableOpacity>
