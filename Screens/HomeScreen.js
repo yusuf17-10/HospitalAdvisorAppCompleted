@@ -33,7 +33,7 @@ export default class HomeScreen extends React.Component {
 
         <Image
           style={styles.imageIcon}
-          source={require('../assets/bg2.jpg')}
+          source={require('../assets/dribbble_2.gif')}
         />
 
         <Text style={styles.text}>
