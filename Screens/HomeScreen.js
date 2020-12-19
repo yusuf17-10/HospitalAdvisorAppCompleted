@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text,View,StyleSheet,TextInput,TouchableOpacity,ImageBackground} from 'react-native';
+import {Text,View,StyleSheet,TextInput,TouchableOpacity,Image} from 'react-native';
 import { Header } from 'react-native-elements';
 
 export default class HomeScreen extends React.Component {
@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
           }}
         />
 
-        <ImageBackground
+        <Image
           style={styles.imageIcon}
           source={require('../assets/bg2.jpg')}
         />
